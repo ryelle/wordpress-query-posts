@@ -1,6 +1,7 @@
 var path = require( 'path' );
 var webpack = require( 'webpack' );
 var NODE_ENV = process.env.NODE_ENV || 'development';
+var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 var webpackConfig;
 
 // This file is written in ES5 because it is run via Node.js and is not transpiled by babel. We want to support various versions of node, so it is best to not use any ES6 features even if newer versions support ES6 features out of the box.
@@ -47,6 +48,7 @@ webpackConfig = {
 	},
 
 	plugins: [
+		new LodashModuleReplacementPlugin,
 		new webpack.DefinePlugin( {
 			// NODE_ENV is used inside React to enable/disable features that should only
 			// be used in development
