@@ -51,7 +51,10 @@ webpackConfig = {
 	},
 
 	plugins: [
-		new LodashModuleReplacementPlugin,
+		new LodashModuleReplacementPlugin( {
+			collections: true,
+			shorthands: true
+		} ),
 		new webpack.DefinePlugin( {
 			// NODE_ENV is used inside React to enable/disable features that should only
 			// be used in development
