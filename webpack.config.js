@@ -16,7 +16,10 @@ webpackConfig = {
 	},
 	output: {
 		path: __dirname,
-		filename: '[name].js'
+		filename: '[name].js',
+		library: '[name]',
+		libraryTarget: 'umd',
+		umdNamedDefine: true
 	},
 	resolve: {
 		extensions: [ '', '.js', '.jsx' ],
