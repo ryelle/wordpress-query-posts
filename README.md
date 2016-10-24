@@ -1,3 +1,8 @@
+WordPress Query Posts
+=====================
+
+This package contains a query component, along with redux state & selectors for posts pulled from a WordPress site. This uses the [`node-wpapi`](https://github.com/WP-API/node-wpapi) package to get your site's data via Query Components ([inspired by calypso](https://github.com/Automattic/wp-calypso/blob/master/docs/our-approach-to-data.md#query-components)). The Query Components call the API, which via actions set your site's data into the state.
+
 Query Posts
 ===========
 
@@ -93,4 +98,18 @@ import { getPost, isRequestingPost } from 'wordpress-query-posts/lib/selectors';
 Post State
 ==========
 
-If you need access to the reducers, action types, or action creators, you can import these from the `state` file. [View the file itself](src/state.js) to see what's available.
+If you need access to the reducers, action types, or action creators, you can import these from the `state` file. For example, to use this in your global redux state, mix it into your reducer tree like this:
+
+```jsx
+import posts from 'wordpress-query-posts/lib/state';
+
+let reducer = combineReducers( { ...otherReducers, posts } );
+```
+
+If you need to call an action (the query component should take care of this most of the time), you can pull the action out specifically:
+
+```jsx
+import { requestPost } from 'wordpress-query-posts/lib/state';
+```
+
+[View the file itself](src/state.js) to see what else is available.
