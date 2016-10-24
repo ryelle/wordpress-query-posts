@@ -69,8 +69,14 @@ The query to be used in requesting posts.
 
 The post slug of the post to request.
 
-Posts Selectors
-===============
+Post Selectors
+==============
+
+You can import these into your project by grabbing them from the `selectors` file:
+
+```jsx
+import { getPost, isRequestingPost } from 'wordpress-query-posts/lib/selectors';
+```
 
 #### `getPost( state, globalId )`
 
@@ -83,3 +89,8 @@ Posts Selectors
 #### `isRequestingPost( state, postSlug )`
 
 #### `getPostIdFromSlug( state, slug )`
+
+Post State
+==========
+
+If you need access to the reducers, action types, or action creators, you can import these from the `state` file. [View the file itself](src/state.js) to see what's available.
