@@ -1,13 +1,16 @@
 {
   "name": "wordpress-query-posts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A component for fetching WordPress post data from the REST API.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ryelle/wordpress-query-posts"
   },
   "keywords": [
-    "react", "react-component", "wordpress", "wpapi"
+    "react",
+    "react-component",
+    "wordpress",
+    "wpapi"
   ],
   "license": "GPL-2.0+",
   "devDependencies": {
