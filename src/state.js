@@ -29,7 +29,7 @@ export const POSTS_REQUEST_FAILURE = 'wordpress-redux/posts/REQUEST_FAILURE';
  * @param  {Object} action Action payload
  * @return {Object}        Updated state
  */
-function items( state = {}, action ) {
+export function items( state = {}, action ) {
 	switch ( action.type ) {
 		case POSTS_RECEIVE:
 			const posts = keyBy( action.posts, 'id' );
@@ -48,7 +48,7 @@ function items( state = {}, action ) {
  * @param  {Object} action Action payload
  * @return {Object}        Updated state
  */
-function requests( state = {}, action ) {
+export function requests( state = {}, action ) {
 	switch ( action.type ) {
 		case POST_REQUEST:
 		case POST_REQUEST_SUCCESS:
@@ -68,7 +68,7 @@ function requests( state = {}, action ) {
  * @param  {Object} action Action payload
  * @return {Object}        Updated state
  */
-function queryRequests( state = {}, action ) {
+export function queryRequests( state = {}, action ) {
 	switch ( action.type ) {
 		case POSTS_REQUEST:
 		case POSTS_REQUEST_SUCCESS:
@@ -91,7 +91,7 @@ function queryRequests( state = {}, action ) {
  * @param  {Object} action Action payload
  * @return {Object}        Updated state
  */
-function totalPages( state = {}, action ) {
+export function totalPages( state = {}, action ) {
 	switch ( action.type ) {
 		case POSTS_REQUEST_SUCCESS:
 			const serializedQuery = getSerializedPostsQuery( action.query );
@@ -112,7 +112,7 @@ function totalPages( state = {}, action ) {
  * @param  {Object} action Action payload
  * @return {Object}        Updated state
  */
-function queries( state = {}, action ) {
+export function queries( state = {}, action ) {
 	switch ( action.type ) {
 		case POSTS_REQUEST_SUCCESS:
 			const serializedQuery = getSerializedPostsQuery( action.query );
@@ -131,7 +131,7 @@ function queries( state = {}, action ) {
  * @param  {Object} action Action payload
  * @return {Object}        Updated state
  */
-function slugs( state = {}, action ) {
+export function slugs( state = {}, action ) {
 	switch ( action.type ) {
 		case POST_REQUEST_SUCCESS:
 			return Object.assign( {}, state, {
