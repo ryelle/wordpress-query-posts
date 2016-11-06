@@ -1,0 +1,33 @@
+{
+  "id": 7,
+  "date": "2016-10-26T17:55:22",
+  "date_gmt": "2016-10-26T21:55:22",
+  "guid": {
+	"rendered": "https://wpapi.local/?p=7"
+  },
+  "modified": "2016-10-26T21:48:24",
+  "modified_gmt": "2016-10-27T01:48:24",
+  "slug": "a-single-post",
+  "type": "post",
+  "link": "https://wpapi.local/2016/10/a-single-post",
+  "title": {
+	"rendered": "A Single Post"
+  },
+  "content": {
+	"rendered": "content",
+	"protected": false
+  },
+  "excerpt": {
+	"rendered": "excerpt",
+	"protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "format": "standard",
+  "meta": {},
+  "categories": [],
+  "tags": []
+}

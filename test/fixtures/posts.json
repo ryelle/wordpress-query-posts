@@ -1,0 +1,147 @@
+[
+  {
+    "id": 6,
+    "date": "2016-10-26T17:55:22",
+    "date_gmt": "2016-10-26T21:55:22",
+    "guid": {
+      "rendered": "https://wpapi.local/?p=6"
+    },
+    "modified": "2016-10-26T21:48:24",
+    "modified_gmt": "2016-10-27T01:48:24",
+    "slug": "wordpress-query-component-tests",
+    "type": "post",
+    "link": "https://wpapi.local/2016/10/wordpress-query-component-tests",
+    "title": {
+      "rendered": "WordPress Query Component Tests"
+    },
+    "content": {
+      "rendered": "content",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "excerpt",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "format": "standard",
+    "meta": {},
+    "categories": [
+      68,
+      51,
+      53
+    ],
+    "tags": []
+  },
+  {
+    "id": 5,
+    "date": "2016-07-18T19:59:46",
+    "date_gmt": "2016-07-18T23:59:46",
+    "guid": {
+      "rendered": "https://wpapi.local/?p=5"
+    },
+    "modified": "2016-08-04T15:23:23",
+    "modified_gmt": "2016-08-04T19:23:23",
+    "slug": "local-development-requires-testing",
+    "type": "post",
+    "link": "https://wpapi.local/2016/07/local-development-requires-testing/",
+    "title": {
+      "rendered": "Local Development Requires Testing"
+    },
+	"content": {
+      "rendered": "content",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "excerpt",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "format": "standard",
+    "meta": {},
+    "categories": [
+      51,
+      53
+    ],
+    "tags": []
+  },
+  {
+    "id": 4,
+    "date": "2016-02-04T12:09:45",
+    "date_gmt": "2016-02-04T17:09:45",
+    "guid": {
+      "rendered": "https://wpapi.local/?p=4"
+    },
+    "modified": "2016-10-27T22:02:18",
+    "modified_gmt": "2016-10-28T02:02:18",
+    "slug": "api-tests",
+    "type": "post",
+    "link": "https://wpapi.local/2016/02/api-tests/",
+    "title": {
+      "rendered": "API Tests"
+    },
+	"content": {
+      "rendered": "content",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "excerpt",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "format": "aside",
+    "meta": {},
+    "categories": [
+      29,
+      53
+    ],
+    "tags": []
+  },
+  {
+    "id": 3,
+    "date": "2015-12-01T13:19:44",
+    "date_gmt": "2015-12-01T18:19:44",
+    "guid": {
+      "rendered": "https://wpapi.local/?p=3"
+    },
+    "modified": "2015-12-09T23:49:06",
+    "modified_gmt": "2015-12-10T04:49:06",
+    "slug": "private-post-example",
+    "type": "post",
+    "link": "https://wpapi.local/2015/12/private-post-example/",
+    "title": {
+      "rendered": "Private Post Example"
+    },
+	"content": {
+      "rendered": "content",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "excerpt",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "format": "standard",
+    "meta": {},
+    "categories": [
+      51,
+      53
+    ],
+    "tags": []
+  }
+]
