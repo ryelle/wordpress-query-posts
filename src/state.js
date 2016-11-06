@@ -53,7 +53,7 @@ export function requests( state = {}, action ) {
 		case POST_REQUEST:
 		case POST_REQUEST_SUCCESS:
 		case POST_REQUEST_FAILURE:
-			return Object.assign( {}, state[ action.postSlug ], { [ action.postSlug ]: POST_REQUEST === action.type } );
+			return Object.assign( {}, state, { [ action.postSlug ]: POST_REQUEST === action.type } );
 		default:
 			return state;
 	}
