@@ -5,7 +5,11 @@
 import { combineReducers } from 'redux';
 import keyBy from 'lodash/keyBy';
 import reduce from 'lodash/reduce';
-const site = require( 'wpapi' )( { endpoint: SiteSettings.endpoint, nonce: SiteSettings.nonce } );
+import qs from 'qs';
+import API from 'wordpress-rest-api-oauth-1';
+const api = new API( {
+	url: SiteSettings.endpoint
+} );
 
 import {
 	getSerializedPostsQuery
@@ -170,18 +174,20 @@ export function requestPosts( query = {} ) {
 			query
 		} );
 
-		const perPage = query.per_page || 10;
+		query._embed = true;
 
-		return site.posts().perPage( perPage ).filter( query ).embed().then( ( data ) => {
+		api.get( '/wp/v2/posts', query ).then( posts => {
 			dispatch( {
 				type: POSTS_RECEIVE,
-				posts: data
+				posts
 			} );
-			dispatch( {
-				type: POSTS_REQUEST_SUCCESS,
-				query,
-				totalPages: data._paging.totalPages,
-				posts: data
+			requestPageCount( '/wp/v2/posts', query ).then( count => {
+				dispatch( {
+					type: POSTS_REQUEST_SUCCESS,
+					query,
+					totalPages: count,
+					posts
+				} );
 			} );
 			return null;
 		} ).catch( ( error ) => {
@@ -207,7 +213,12 @@ export function requestPost( postSlug ) {
 			postSlug
 		} );
 
-		return site.posts().slug( postSlug ).embed().then( ( data ) => {
+		const query = {
+			slug: postSlug,
+			_embed: true,
+		};
+
+		api.get( '/wp/v2/posts', query ).then( data => {
 			const post = data[0];
 			dispatch( {
 				type: POSTS_RECEIVE,
@@ -227,4 +238,31 @@ export function requestPost( postSlug ) {
 			} );
 		} );
 	};
+}
+
+function requestPageCount( url, data = null ) {
+	if ( url.indexOf( 'http' ) !== 0 ) {
+		url = `${api.config.url}wp-json${url}`
+	}
+
+	if ( data ) {
+		// must be decoded before being passed to ouath
+		url += `?${decodeURIComponent( qs.stringify( data ) )}`;
+		data = null
+	}
+
+	const headers = {
+		'Accept': 'application/json',
+		'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+	};
+
+	return fetch( url, {
+		method: 'HEAD',
+		headers: headers,
+		mode: 'cors',
+		body: null
+	} )
+	.then( response => {
+		return parseInt( response.headers.get( 'X-WP-TotalPages' ), 10 ) || 1;
+	} );
 }
