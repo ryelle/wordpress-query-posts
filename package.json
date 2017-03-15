@@ -28,7 +28,7 @@
     "deep-freeze": "0.0.1",
     "eslint": "^3.8.1",
     "eslint-plugin-react": "^6.4.1",
-    "sinon": "^1.17.6"
+    "sinon": "^2.0.0"
   },
   "dependencies": {
     "debug": "^2.2.0",
