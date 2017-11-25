@@ -10,7 +10,7 @@ const DEFAULT_POST_QUERY = {
 	order_by: 'date',
 	type: 'post',
 	status: 'publish',
-	search: ''
+	search: '',
 };
 
 /**

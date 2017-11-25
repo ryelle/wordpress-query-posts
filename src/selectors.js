@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 import {
-	getSerializedPostsQuery
+	getSerializedPostsQuery,
 } from './utils';
 
 /**

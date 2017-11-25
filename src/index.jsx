@@ -1,11 +1,12 @@
 /**
  * External dependencies
  */
-import { Component, PropTypes } from 'react';
-import shallowEqual from 'shallowequal';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import debugFactory from 'debug';
+import PropTypes from 'prop-types';
+import shallowEqual from 'shallowequal';
 
 /**
  * Internal dependencies
@@ -52,11 +53,11 @@ QueryPosts.propTypes = {
 	postSlug: PropTypes.string,
 	query: PropTypes.object,
 	requestingPosts: PropTypes.bool,
-	requestPosts: PropTypes.func
+	requestPosts: PropTypes.func,
 };
 
 QueryPosts.defaultProps = {
-	requestPosts: () => {}
+	requestPosts: () => {},
 };
 
 export default connect(
@@ -64,13 +65,13 @@ export default connect(
 		const { postSlug, query } = ownProps;
 		return {
 			requestingPost: isRequestingPost( state, postSlug ),
-			requestingPosts: isRequestingPostsForQuery( state, query )
+			requestingPosts: isRequestingPostsForQuery( state, query ),
 		};
 	},
 	( dispatch ) => {
 		return bindActionCreators( {
 			requestPosts,
-			requestPost
+			requestPost,
 		}, dispatch );
 	}
 )( QueryPosts );
