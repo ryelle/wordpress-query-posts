@@ -50,7 +50,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "watch": "babel src --out-dir lib --watch",
-    "lint": "eslint js --ext=js,jsx",
+    "lint": "eslint src --ext=js,jsx",
     "test": "mocha  --require ./mocha-setup",
     "preversion": "npm test",
     "version": "npm run build && git add -A lib",

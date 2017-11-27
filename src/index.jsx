@@ -22,8 +22,10 @@ class QueryPosts extends Component {
 	}
 
 	componentWillReceiveProps( nextProps ) {
-		if ( this.props.postSlug === nextProps.postSlug &&
-				shallowEqual( this.props.query, nextProps.query ) ) {
+		if (
+			this.props.postSlug === nextProps.postSlug &&
+			shallowEqual( this.props.query, nextProps.query )
+		) {
 			return;
 		}
 
@@ -68,10 +70,13 @@ export default connect(
 			requestingPosts: isRequestingPostsForQuery( state, query ),
 		};
 	},
-	( dispatch ) => {
-		return bindActionCreators( {
-			requestPosts,
-			requestPost,
-		}, dispatch );
-	}
+	dispatch => {
+		return bindActionCreators(
+			{
+				requestPosts,
+				requestPost,
+			},
+			dispatch,
+		);
+	},
 )( QueryPosts );
