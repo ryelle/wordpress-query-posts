@@ -3,8 +3,7 @@
  * External dependencies
  */
 import { combineReducers } from 'redux';
-import keyBy from 'lodash/keyBy';
-import reduce from 'lodash/reduce';
+import { keyBy, reduce } from 'lodash';
 import qs from 'qs';
 import API from 'wordpress-rest-api-oauth-1';
 const api = new API( {
