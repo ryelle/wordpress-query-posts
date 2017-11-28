@@ -3,7 +3,7 @@
  */
 import { expect } from 'chai';
 import deepFreeze from 'deep-freeze';
-import keyBy from 'lodash/keyBy';
+import { keyBy } from 'lodash';
 
 /**
  * Internal dependencies

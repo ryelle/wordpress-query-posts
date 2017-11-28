@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import omitBy from 'lodash/omitBy';
+import { omitBy } from 'lodash';
 
 const DEFAULT_POST_QUERY = {
 	_embed: true,
