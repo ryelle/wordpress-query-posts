@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "debug": "^3.1.0",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.11",
     "qs": "^6.3.0",
     "react": "^16.1.1",
     "react-redux": "^5.0.6",
