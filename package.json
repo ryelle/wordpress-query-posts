@@ -38,7 +38,7 @@
     "lodash": "^4.17.2",
     "qs": "^6.3.0",
     "react": "^16.1.1",
-    "react-redux": "^5.0.6",
+    "react-redux": "^6.0.1",
     "redux": "^3.6.0",
     "shallowequal": "^1.0.2",
     "wordpress-rest-api-oauth-1": "^1.0.8"
